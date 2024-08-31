@@ -1,57 +1,77 @@
-https://kiyokiy.github.io/index.html
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>マッチングサイト</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>マッチングサイト</h1>
+        <header>
+            <h1>マッチングサイト</h1>
+        </header>
 
-        <div id="user-area" style="display: none;">
-            <h2>プロフィール</h2>
-            <div id="user-profile">
-                <!-- ユーザー情報と編集ボタン -->
-            </div>
-            <button id="logout-button">ログアウト</button>
-        </div>
+        <main>
+            <section id="user-area" style="display: none;">
+                <h2>プロフィール</h2>
+                <div id="user-profile">
+                    <div class="user-info">
+                        <img src="https://placehold.co/150x150" alt="ユーザー画像">
+                        <h3>ユーザー名</h3>
+                        <p>自己紹介文</p>
+                    </div>
+                    <button class="edit-button">プロフィール編集</button>
+                </div>
+                <button id="logout-button">ログアウト</button>
+            </section>
 
-        <div id="matching-area" style="display: none;">
-            <h2>マッチング</h2>
-            <div id="matching-list">
-                <!-- マッチングしたユーザー一覧 -->
-            </div>
-        </div>
+            <section id="matching-area" style="display: none;">
+                <h2>マッチング</h2>
+                <div id="matching-list">
+                    <div class="user-card">
+                        <img src="https://placehold.co/100x100" alt="ユーザー画像">
+                        <h3>ユーザー名</h3>
+                        <p>簡単な自己紹介</p>
+                    </div>
+                    <div class="user-card">
+                        <img src="https://placehold.co/100x100" alt="ユーザー画像">
+                        <h3>ユーザー名</h3>
+                        <p>簡単な自己紹介</p>
+                    </div>
+                    <!-- 他のユーザーカード -->
+                </div>
+            </section>
 
-        <div id="registration-form">
-            <h2>新規登録</h2>
-            <form>
-                <label for="name">名前:</label>
-                <input type="text" id="name" name="name" required>
+            <section id="registration-form">
+                <h2>新規登録</h2>
+                <form>
+                    <label for="name">名前:</label>
+                    <input type="text" id="name" name="name" required>
 
-                <label for="email">メールアドレス:</label>
-                <input type="email" id="email" name="email" required>
+                    <label for="email">メールアドレス:</label>
+                    <input type="email" id="email" name="email" required>
 
-                <label for="password">パスワード:</label>
-                <input type="password" id="password" name="password" required>
+                    <label for="password">パスワード:</label>
+                    <input type="password" id="password" name="password" required>
 
-                <button type="submit">登録</button>
-            </form>
-        </div>
+                    <button type="submit">登録</button>
+                </form>
+            </section>
 
-        <div id="login-form" style="display: none;">
-            <h2>ログイン</h2>
-            <form>
-                <label for="email">メールアドレス:</label>
-                <input type="email" id="email" name="email" required>
+            <section id="login-form" style="display: none;">
+                <h2>ログイン</h2>
+                <form>
+                    <label for="email">メールアドレス:</label>
+                    <input type="email" id="email" name="email" required>
 
-                <label for="password">パスワード:</label>
-                <input type="password" id="password" name="password" required>
+                    <label for="password">パスワード:</label>
+                    <input type="password" id="password" name="password" required>
 
-                <button type="submit">ログイン</button>
-            </form>
-        </div>
+                    <button type="submit">ログイン</button>
+                </form>
+            </section>
+        </main>
     </div>
 
     <script src="script.js"></script>
