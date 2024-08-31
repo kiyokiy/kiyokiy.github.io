@@ -1,44 +1,58 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>マッチングアプリ模倣サイト</title>
-  <link rel="stylesheet" href="style.css">
+    <title>マッチングサイト</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>マッチングアプリ</h1>
-    <nav>
-      <ul>
-        <li><a href="#">ログイン</a></li>
-        <li><a href="#">登録</a></li>
-      </ul>
-    </nav>
-  </header>
+    <div class="container">
+        <h1>マッチングサイト</h1>
 
-  <main>
-    <section id="profile">
-      <h2>プロフィール</h2>
-      <div class="profile-card">
-        <img src="profile-pic.jpg" alt="プロフィール写真">
-        <div class="profile-info">
-          <h3>ユーザー名</h3>
-          <p>自己紹介文</p>
+        <div id="user-area" style="display: none;">
+            <h2>プロフィール</h2>
+            <div id="user-profile">
+                <!-- ユーザー情報と編集ボタン -->
+            </div>
+            <button id="logout-button">ログアウト</button>
         </div>
-      </div>
-    </section>
 
-    <section id="matching">
-      <h2>マッチング</h2>
-      <div class="matching-list">
-        <!-- マッチングユーザーの情報 -->
-      </div>
-    </section>
-  </main>
+        <div id="matching-area" style="display: none;">
+            <h2>マッチング</h2>
+            <div id="matching-list">
+                <!-- マッチングしたユーザー一覧 -->
+            </div>
+        </div>
 
-  <footer>
-    <p>© 2023 マッチングアプリ</p>
-  </footer>
+        <div id="registration-form">
+            <h2>新規登録</h2>
+            <form>
+                <label for="name">名前:</label>
+                <input type="text" id="name" name="name" required>
 
-  <script src="script.js"></script>
+                <label for="email">メールアドレス:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">パスワード:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">登録</button>
+            </form>
+        </div>
+
+        <div id="login-form" style="display: none;">
+            <h2>ログイン</h2>
+            <form>
+                <label for="email">メールアドレス:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">パスワード:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">ログイン</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
